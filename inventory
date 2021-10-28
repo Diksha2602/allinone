@@ -27,7 +27,7 @@
  	docker_container:
   	name: devopsapp
   	image: "Diksha2602/devopsapp:{{DOCKER_TAG}}"
-state: started
+   state: started
   	restart: yes
   	ports:
    	- "8080:8080"
