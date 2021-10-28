@@ -1,2 +1,47 @@
 [dev]
 54,175,172,94 ansible_user=ubuntu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   - name: Install docker-py python module
+ 	pip:
+  	name: docker-py
+  	state: present
+   - name: Start the Container
+ 	docker_container:
+  	name: devopsapp
+  	image: "Diksha2602/devopsapp:{{DOCKER_TAG}}"
+state: started
+  	restart: yes
+  	ports:
+   	- "8080:8080"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
